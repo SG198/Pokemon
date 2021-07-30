@@ -1,0 +1,512 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)); */
+}
+body{
+    background-color: #290729;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-self: center;
+    justify-content: space-between;
+    position: fixed;
+    transition: 0.5s;
+    z-index: 1000;
+}
+header .logo{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+header nav{
+    float: right;
+}
+header nav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+header nav ul li{
+    list-style: none;
+}
+header nav ul li a{
+    text-decoration: none;
+    padding: 0 20px;
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    color: #ffffff;
+    font-weight: 700;
+}
+span{
+    color:rgb(5, 121, 82);
+}
+header nav ul li a:hover,
+header nav ul li a.active{
+    color: rgb(243, 46, 79);
+    transition: 0.5s;
+}
+.menu-toggle{
+    color: #ffffff;
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Sticky  Navbar*/
+header.sticky{
+    background: #ffffff;
+    color: #262626;
+    padding: 10px 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+header.sticky .logo{
+    color: #262626;
+}
+
+header.sticky ul li a{
+    color: #262626;
+}
+section{
+    padding-top: 100px;
+}
+
+/* Home section */
+#home{
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/wal2.jpg) no-repeat fixed;
+    /* ,url(images/wal2.jpg) no-repeat */
+    height: 80vh;
+    background-size: cover;
+    width: 100%;
+}
+#home span::before{
+    content: '';
+    animation:animate infinite alternate;
+    animation-duration: 5s;
+}
+
+#home .content{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   text-align: center;
+   width: 100%;
+   
+}
+
+#home .HText{
+    color: #fff;
+    font-size: 55px;
+}
+#home .subText{
+    color: azure;
+}
+
+
+
+/* Common */
+.heading{
+    position: relative;
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+
+/* About part */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: gray;
+    margin-top: 20px;
+}
+.leftContainer{
+    width: 400px;
+}
+.headText{
+    color: rgb(131, 10, 30);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.subText{
+    font-size: 35px;
+
+}
+.mainImage{
+    width: 410px;
+    height: 410px;
+    box-shadow: 0 8px 32px 0 rgba(20, 80, 19, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+.mainImage img{
+    width: 400px;
+    height: 400px;
+    /* padding: 5px; */
+    object-fit: cover;
+}
+
+
+
+/* pokemon part */
+#pokemon{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/support1.jpg) no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.boxModel{
+    width: 220px;
+    height: 220px;
+    
+}
+.box{
+    width: 220px;
+    height: 260px;
+    box-shadow: 0 8px 32px 0 rgba(20, 80, 19, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(2px);
+    margin: 20px;
+    background: #ffffff;
+    border: 3px solid gray;
+    border-radius: 10px;
+}
+.box img{
+    width: 200px;
+    height: 200px;
+    /* padding: 10px 5px; */
+    object-fit: cover;
+}
+.name,.tName{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-decoration: none;
+   font-weight: 800;
+   font-size: 25px;
+}
+#pokemon #pikachu::before{
+    content: '';
+    animation:animate1 infinite ;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+#pokemon #balbasaur::before{
+    content: '';
+    animation:animate2 infinite ;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+#pokemon #squirtle::before{
+    content: '';
+    animation:animate3 infinite ;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+#pokemon #jigly::before{
+    content: '';
+    animation:animate4 infinite ;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+
+
+/* Trainer part */
+#trainers{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(images/support3.jpg) no-repeat;
+    background-size: cover;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+.tName{
+    color: rgb(41, 7, 41);
+}
+.quote{
+   text-align: center;
+    width: 800px;
+    background: #262626;
+    color: #ffffff;
+    border: 5px solid gray;
+    border-radius: 20px;
+    padding: 15px;
+}
+/* .quoteBox{
+    padding: 5px;
+} */
+.mainQuote{
+    display: flex;
+    justify-self: center;
+    justify-content: space-evenly;
+}
+/* position: relative;
+text-align: center;
+font-size: 25px;
+color: #ffffff; */
+/* expert part */
+.thumbnail{
+    width: 380px;
+    height: 300px;
+    box-shadow: 0 8px 32px 0 rgba(20, 80, 19, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(2px);
+    margin: 20px;
+    background: #ffffff;
+}
+.thumbnail img{
+    width: 380px;
+    height: 280px;
+    padding: 10px;
+}
+.paras{
+    padding-top: 30px;
+    width: 400px;
+    color: #ffffff;
+
+}
+.part1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.textbig{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* Animation */
+@keyframes animate{
+    0%{
+        content: 'magical';
+    }
+    50%{
+        content: 'creative';
+    }
+    100%{
+        content: 'imaginary';
+    }
+}
+
+@keyframes animate1{
+    0%{
+        content: 'Pika...';
+    }
+    50%{
+        content: 'Pikaaa...';
+        color: rgb(243, 46, 79);
+    }
+    100%{
+        content: 'Pikachuuuuu';
+        color: #262626;
+    }
+}
+@keyframes animate2{
+    0%{
+        content: 'Baaaa....';
+    }
+    50%{
+        content: 'baaaa.....';
+        color: rgb(243, 46, 79);
+    }
+    100%{
+        content: 'Saurrrrrrrr';
+        color: #262626;
+    }
+}
+@keyframes animate3{
+    0%{
+        content: 'Squador......';
+    }
+    50%{
+        content: 'Quador.......';
+        color: rgb(243, 46, 79);
+    }
+    100%{
+        content: 'Squador';
+        color: #262626;
+    }
+}
+@keyframes animate4{
+    0%{
+        content: 'Jigly...';
+    }
+    50%{
+        content: 'jigly...';
+        color: rgb(243, 46, 79);
+    }
+    100%{
+        content: 'jiglyyyyyyy';
+        color: #262626;
+    }
+}
+
+/* Footer */
+.footer{
+    background:#282727;
+    padding:1rem 7%;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* .footer .box-container .footer-box{
+   
+} */
+
+.footer .box-container .footer-box h3{
+    font-size: 30px;
+    color:#fff;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.footer .box-container .footer-box p{
+    font-size: 15px;
+    color:#eee;
+    padding:1rem 0;
+}
+
+.footer .box-container .footer-box a{
+    font-size: 15px;
+    padding:1rem 0;
+    display: block;
+    color: #eee;
+}
+h2 a{
+    color: #111;
+}
+.footer a{
+    text-decoration: none;
+}
+.footer .box-container .footer-box a:hover{
+    color:#111;
+    transition: 0.5s;
+}
+
+.footer .box-container .footer-box p i{
+    padding-right: .5rem;
+}
+
+.footer .credit{
+    font-size: 15px;
+    text-align: center;
+    border-top: .2rem solid rgba(255,255,255,.7);
+    padding:2rem 1rem;
+    font-weight: normal;
+    letter-spacing: .1rem;
+    color:#fff;
+}
+
+
+/* Responsive */
+@media(max-width:991px){
+    header{
+        padding: 0 20px;
+    }
+    .menu-toggle{
+        display: block;
+        color: #fff;
+    }
+    header.sticky .menu-toggle{
+        color: #111;
+    }
+    header nav{
+        position: absolute;
+        width: 100%;
+        height: (100vh - 50px);
+        top: 60px;
+        left: -100%;
+        background: #fff;
+        transition: 0.5s;
+    }
+    header nav.active{
+        left: 0;
+    }
+    /* header.sticky .menu-toggle{
+        color: #ffffff;
+    } */
+    header nav ul{
+        display: block;
+        text-align: center;
+    }
+    header nav ul li a{
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        color: #262626;
+    }
+}
+@media(max-width:591px){
+
+  
+
+.thumbnail{
+        width: 350px;
+        height: 250px;
+        margin: 20px;
+        background: #ffffff;
+    }
+    .thumbnail img{
+        width: 330px;
+        height: 230px;
+        padding: 10px;
+    }
+    .mainImage{
+      width: 350px;
+      height: 350px;
+    }
+    .mainImage img{
+        width: 330px;
+        height: 330px;
+      }
+
+      .footer{
+          margin-top: 20px;
+      }
+}
+@media(max-width:411px){
+    body{
+        overflow-x: hidden;
+    }
+    #home .content{
+        top: 40%;
+    }
+    .aboutContainer{
+        width: 80%;
+        margin:30px;
+    }
+    .paras{
+        
+        width: 80%;
+        margin-left:30px;
+    }
+}
+
+  
+  
+
